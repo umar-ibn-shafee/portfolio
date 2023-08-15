@@ -18,7 +18,7 @@ export default function Projects() {
                 {
                     projectsData.map((project, index) => (
                         <React.Fragment key={index}>
-                            {/* <Project {...project} /> */}
+                            <Project {...project} />
                             {project.title}
                         </React.Fragment>
                     ))

@@ -7,10 +7,12 @@ import Link from "next/link";
 import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from 'react-icons/hi'
 import { useSectioninview } from '@/lib/hooks';
+import { useActiveSectionContext } from '@/context/active-section-context';
 
 export default function Intro() {
 
     const { ref } = useSectioninview('Home')
+    const {setActiveSection} = useActiveSectionContext()
 
     return (
         <section
@@ -35,9 +37,9 @@ export default function Intro() {
                             height={500}
                             quality={95}
                             priority={true}
-                            className='h-40 w-40 rounded-3xl object-cover border-[0.35rem] border-white shadow-xl' />
+                            className='h-40 w-40 rounded-3xl object-cover border-[0.35rem] border-black shadow-xl' />
                     </motion.div>
-                    <motion.span className='text-6xl absolute bottom-0 -right-5'
+                    {/* <motion.span className='text-6xl absolute bottom-0 -right-5'
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{
@@ -48,7 +50,7 @@ export default function Intro() {
                         }}
                     >
                         👋
-                    </motion.span>
+                    </motion.span> */}
                 </div>
             </div>
 
@@ -76,6 +78,7 @@ export default function Intro() {
                     href={"#contact"}
                     className='group bg-gray-900 text-white px-7 py-3 flex justify-center items-center gap-2 rounded-full outline-none 
                     focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'
+                    onClick={() => setActiveSection('Contact') }
                 >
                     Contact me here <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
                 </Link>
