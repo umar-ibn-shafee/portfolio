@@ -13,7 +13,7 @@ export default function Experience() {
   const { ref } = useSectioninview('Experience')
 
   return (
-    <section ref={ref} className='scroll-mt-28' id='experience'>
+    <section ref={ref} className='scroll-mt-28 sm:mb-40 mb-28' id='experience'>
       <SectionHeading>My Experience</SectionHeading>
       <VerticalTimeline lineColor=''>
         {
