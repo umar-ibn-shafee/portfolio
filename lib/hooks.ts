@@ -8,7 +8,7 @@ export function useSectioninview(sectionName: SectionName, threshold = 0.5) {
         threshold
     });
 
-    const { activeSection, setActiveSection, lastClickTime } = useActiveSectionContext()
+    const { activeSection, setActiveSection } = useActiveSectionContext()
 
     useEffect(() => {
         if (inView) {
@@ -16,7 +16,7 @@ export function useSectioninview(sectionName: SectionName, threshold = 0.5) {
             console.log('ActiveSection change to:', sectionName)
         }
         // console.log('Activesection on inView:', activeSection, sectionName)
-    }, [inView, activeSection, lastClickTime])
+    }, [inView, sectionName, activeSection, setActiveSection])
 
     return {
         ref
