@@ -76,16 +76,18 @@ export default function Intro() {
             >
                 <Link
                     href={"#contact"}
-                    className='group bg-gray-900 text-white px-7 py-3 flex justify-center items-center gap-2 rounded-full outline-none 
-                    focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'
+                    className='group bg-gray-900 text-white px-7 py-3 flex justify-center items-center gap-2 
+                    rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 
+                    transition-all'
                     onClick={() => setActiveSection('Contact') }
                 >
                     Contact me here <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
                 </Link>
 
                 <a
-                    className='group bg-white px-7 py-3 flex justify-center items-center gap-2 rounded-full outline-none 
-                    focus:scale-110 hover:scale-110 active:scale-105 transition border border-black/10'
+                    className='group bg-white px-7 py-3 flex justify-center items-center gap-2 rounded-full 
+                    outline-none focus:scale-110 hover:scale-110 active:scale-105 transition-all border 
+                    border-black/10 dark:bg-white/10'
                     href='/Umar-CV.pdf'
                     download={true}
                 >
@@ -93,8 +95,9 @@ export default function Intro() {
                 </a>
 
                 <a
-                    className='bg-white p-4 text-gray-600 hover:text-gray-950 flex justify-center items-center gap-2 rounded-full
-                    outline-none focus:scale-25 hover:scale-125 active:scale-105 transition border border-black/10'
+                    className='bg-white p-4 text-gray-600 hover:text-gray-950 flex justify-center items-center 
+                    gap-2 rounded-full outline-none focus:scale-25 hover:scale-125 active:scale-105 transition-all 
+                    border border-black/10 dark:bg-white/10 dark:text-white/70'
                     href='https://www.linkedin.com/in/umar-ibn-shafee/'
                     target='_blank'
                 >
@@ -102,8 +105,9 @@ export default function Intro() {
                 </a>
 
                 <a
-                    className='bg-white p-4 text-gray-600 hover:text-gray-950 flex justify-center items-center gap-2 rounded-full
-                    outline-none focus:scale-125 hover:scale-125 active:scale-105 transition border border-black/10'
+                    className='bg-white p-4 text-gray-600 hover:text-gray-950 flex justify-center items-center 
+                    gap-2 rounded-full outline-none focus:scale-125 hover:scale-125 active:scale-105 transition-all
+                    border border-black/10 dark:bg-white/10 dark:text-white/70'
                     href='https://github.com/umar-ibn-shafee'
                     target='_blank'
                 >

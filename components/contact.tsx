@@ -18,28 +18,31 @@ export default function Contact() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      viewport={{once:true}}
+      viewport={{ once: true }}
     >
       <SectionHeading>Contact Me</SectionHeading>
-      <p className='text-gray-700 -mt-6'>Please contatc me directly at{" "}
+      <p className='text-gray-700 -mt-6 dark:text-white/80'>Please contatc me directly at{" "}
         <a
           className='underline'
           href='mailto:me@ibnshafee.dev'
         >
           me@ibnshafee.dev
         </a> or through this form</p>
-      <form className='mt-10 flex flex-col'>
+      <form className='mt-10 flex flex-col dark:text-black'>
         <input
-          className='rounded-lg borderBlack h-14 p-4'
+          className='rounded-lg borderBlack h-14 p-4 dark:bg-white dark:bg-opacity-80 
+          dark:focus:bg-opacity-100 transition-all outline-none'
           type='email'
           placeholder='Your email' />
         <textarea
-          className='rounded-lg borderBlack h-52 my-3 p-4'
+          className='rounded-lg borderBlack h-52 my-3 p-4 dark:bg-white 
+          dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all outline-none'
           placeholder='Your message' />
         <button
           className='group flex items-center justify-center gap-2 h-[3rem] w-[8rem] 
           bg-gray-900 text-white rounded-full transition-all outline-none
-          hover:bg-black hover:scale-110 focus:scale-110 active:scale-105'
+          hover:bg-black hover:scale-110 focus:scale-110 active:scale-105
+          dark:bg-white dark:bg-opacity-10'
           type='submit'
         >
           Submit

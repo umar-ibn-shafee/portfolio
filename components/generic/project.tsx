@@ -29,16 +29,18 @@ export default function Project({ title, description, tags, imageUrl }: Props) {
         >
             <section
                 className='my-4 p-4 max-w-2xl relative overflow-hidden bg-gray-100 border border-black/5 
-                rounded-lg sm:pr-8 sm:h-[20rem] sm:mb-8 last:mb-0 even:ml-[18rem] hover:bg-gray-200 transition'
+                rounded-lg sm:pr-8 sm:h-[20rem] sm:mb-8 last:mb-0 even:ml-[18rem] hover:bg-gray-200 transition
+                dark:bg-white/10 dark:hover:bg-white/20 dark:text-white'
             >
                 <div className='flex flex-col h-full pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] sm:group-even:ml-[18rem]'>
                     <h3 className='font-semibold text-2xl'>{title}</h3>
-                    <p className='mt-2 leading-relaxed text-gray-600 text-sm'>{description}</p>
+                    <p className='mt-2 leading-relaxed text-gray-600 text-sm dark:text-white/70'>{description}</p>
                     <ul className='flex flex-wrap gap-2 mt-4 sm:mt-auto'>
                         {tags.map((tag, i) => (
                             <li
                                 key={i}
-                                className='bg-black/[0.7] px-3 py-1 text-white text-[0.7rem] uppercase tracking-wider rounded-full'
+                                className='bg-black/[0.9] px-3 py-1 text-white text-[0.7rem] uppercase 
+                                tracking-wider rounded-full dark:text-white/70'
                             >
                                 {tag}
                             </li>
