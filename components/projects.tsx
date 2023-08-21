@@ -9,7 +9,7 @@ import { useSectioninview } from '@/lib/hooks';
 
 export default function Projects() {
 
-    const { ref } = useSectioninview('Projects')
+    const { ref } = useSectioninview('Projects', 0.25)
 
     return (
         <motion.section ref={ref} className='mb-28 scroll-mt-28' id='projects'>
