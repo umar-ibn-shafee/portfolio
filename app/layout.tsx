@@ -1,13 +1,47 @@
 import Header from '@/components/header'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Roboto_Mono } from 'next/font/google'
+import localFont from "next/font/local";
 import ActiveSectionContextProvider from '@/context/active-section-context'
 import Footer from '@/components/screens/footer'
 import ThemeSwitch from '@/components/theme-switch'
 import ThemeContextProvider from '@/context/theme-context'
 
-const inter = Inter({ subsets: ['latin'] })
+const robotoMono = Roboto_Mono({subsets: ['latin'], variable: '--font-roboto-mono'})
+
+const neuefontAll = localFont({variable: '--font-neue-montreal', src: [
+  {
+    path: '../public/fonts/Neue-Montreal/OTF/PPNeueMontreal-Book.otf',
+    weight: '400',
+    style: 'normal'
+  },
+  {
+    path: '../public/fonts/Neue-Montreal/OTF/PPNeueMontreal-Bold.otf',
+    weight: '800',
+    style: 'normal'
+  },
+  {
+    path: '../public/fonts/Neue-Montreal/OTF/PPNeueMontreal-Medium.otf',
+    weight: '530',
+    style: 'normal'
+  },
+  {
+    path: '../public/fonts/Neue-Montreal/OTF/PPNeueMontreal-Italic.otf',
+    weight: '450',
+    style: 'italic'
+  },
+  {
+    path: '../public/fonts/Neue-Montreal/OTF/PPNeueMontreal-SemiBolditalic.otf',
+    weight: '700',
+    style: 'italic'
+  },
+  {
+    path: '../public/fonts/Neue-Montreal/OTF/PPNeueMontreal-Thin.otf',
+    weight: '200',
+    style: 'normal'
+  }
+]})
 
 export const metadata: Metadata = {
   title: 'Umar Ibn Shafee | Personal Portfolio',
@@ -22,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en" className='!scroll-smooth'>
       <body
-        className={`${inter.className} bg-slate-50 text-gray-950 relative pt-28 sm:pt-36
+        className={`${neuefontAll.variable} ${robotoMono.variable} font-sans bg-slate-50 text-gray-950 relative pt-28 sm:pt-36
       dark:bg-gray-950 dark:text-gray-50 dark:text-opacity-90`}>
         <div
           className='bg-[#f79c9f] animate-reverse-blob mix-blend-multiply absolute -z-10 top-[-6rem] right-[11rem] 

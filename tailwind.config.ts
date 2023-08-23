@@ -13,6 +13,10 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        sans: ['var(--font-neue-montreal)'],
+        mono: ['var(--font-roboto-mono)']
+      },
       animation: {
         'blob': 'blob 10s infinite',
         'reverse-blob': 'reverse-blob 10s infinite'
