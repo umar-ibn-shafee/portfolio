@@ -73,28 +73,28 @@ const config: Config = {
             transform: "translate(400px, -500px) scale(1.2)"
           },
           '20%': {
-            transform: "translate(1000px, 0px) scale(0.8)"
+            transform: "translate(1000px, 0px) scale(1.6)"
           },
           '30%': {
-            transform: "translate(-200px, -100px) scale(1.4)"
+            transform: "translate(-200px, -100px) scale(2)"
           },
           '40%': {
-            transform: "translate(-200px, -800px) scale(1.2)"
+            transform: "translate(-200px, -800px) scale(2.4)"
           },
           '50%': {
-            transform: "translate(400px, -800px) scale(1.5)"
+            transform: "translate(400px, -1100px) scale(2.2)"
           },
           '60%': {
-            transform: "translate(1000px, -500px) scale(1.8)"
+            transform: "translate(1100px, -500px) scale(1.8)"
           },
           '70%': {
-            transform: "translate(800px, 0px) scale(1.2)"
+            transform: "translate(800px, 0px) scale(1.4)"
           },
           '80%': {
             transform: "translate(200px, -800px) scale(1.8)"
           },
           '90%': {
-            transform: "translate(-200px, -700px) scale(1.2)"
+            transform: "translate(-200px, -700px) scale(1.4)"
           }
         },
         'blob': {
