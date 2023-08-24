@@ -56,9 +56,9 @@ export default function RootLayout({
   return (
     <html lang="en" className='!scroll-smooth'>
       <body
-        className={`${neuefontAll.variable} ${robotoMono.variable} font-sans bg-slate-50 text-gray-950 relative pt-28 sm:pt-36
+        className={`${neuefontAll.variable} ${robotoMono.variable} font-sans bg-slate-50 text-gray-950 relative pt-4 sm:pt-4
       dark:bg-gray-950 dark:text-gray-50 dark:text-opacity-90`}>
-        <div
+        {/* <div
           className='bg-[#f79c9f] animate-reverse-blob mix-blend-multiply absolute -z-10 top-[-6rem] right-[11rem] 
         h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263] dark:mix-blend-normal'></div>
         <div
@@ -68,7 +68,7 @@ export default function RootLayout({
         <div
           className='bg-[#f89dd0] animate-reverse-blob animation-delay-2000 mix-blend-multiply absolute 
         -z-10 top-[-15rem] right-[11rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] 
-        sm:left-[-45rem] md:left-[-36rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#946263] dark:mix-blend-normal'></div>
+        sm:left-[-45rem] md:left-[-36rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#946263] dark:mix-blend-normal'></div> */}
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>

@@ -18,10 +18,91 @@ const config: Config = {
         mono: ['var(--font-roboto-mono)']
       },
       animation: {
-        'blob': 'blob 10s infinite',
-        'reverse-blob': 'reverse-blob 10s infinite'
+        'blob': 'blob 4s infinite',
+        'reverse-blob': 'reverse-blob 4s infinite',
+        'corners': 'corners 20s infinite',
+        'go-rounds': 'go-rounds 20s infinite',
+        'wave': 'wave 15s',
       },
       keyframes: {
+        'wave': {
+          '0%': {
+            transform: "translate(0px, 0px) scale(1)"
+          },
+          '50%': {
+            transform: "translate(-400px, -500px) scale(1)"
+          },
+          '100%': {
+            transform: "translate(-1000px, 0px) scale(0.8)"
+          },
+        },
+        'go-rounds': {
+          '0%': {
+            transform: "translate(0px, 0px) scale(1)"
+          },
+          '20%': {
+            transform: "translate(-400px, -500px) scale(1.3)"
+          },
+          '30%': {
+            transform: "translate(-1000px, 0px) scale(0.8)"
+          },
+          '40%': {
+            transform: "translate(-400px, -100px) scale(1.4)"
+          },
+          '50%': {
+            transform: "translate(200px, -500px) scale(2)"
+          },
+          '60%': {
+            transform: "translate(-400px, -900px) scale(1.6)"
+          },
+          '70%': {
+            transform: "translate(-900px, -900px) scale(2)"
+          },
+          '80%': {
+            transform: "translate(-900px, -400px) scale(1.4)"
+          },
+          '90%': {
+            transform: "translate(-400px, 0px) scale(1.2)"
+          },
+          '100%': {
+            transform: "translate(0px, 0px) scale(1)"
+          },
+        },
+        'corners': {
+          '0%': {
+            transform: "translate(0px, 0px) scale(1)"
+          },
+          '10%': {
+            transform: "translate(400px, -500px) scale(1.2)"
+          },
+          '20%': {
+            transform: "translate(1000px, 0px) scale(0.8)"
+          },
+          '30%': {
+            transform: "translate(-200px, -100px) scale(1.4)"
+          },
+          '40%': {
+            transform: "translate(-200px, -800px) scale(1.2)"
+          },
+          '50%': {
+            transform: "translate(400px, -800px) scale(1.5)"
+          },
+          '60%': {
+            transform: "translate(1000px, -500px) scale(1.8)"
+          },
+          '70%': {
+            transform: "translate(800px, 0px) scale(1.2)"
+          },
+          '80%': {
+            transform: "translate(200px, -800px) scale(1.8)"
+          },
+          '90%': {
+            transform: "translate(-200px, -700px) scale(1.2)"
+          },
+          '100%': {
+            transform: "translate(0px, 0px) scale(1)"
+          }
+        },
         'blob': {
           '0%': {
             transform: "translate(0px, 0px) scale(1)"
