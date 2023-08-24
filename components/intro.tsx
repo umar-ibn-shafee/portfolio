@@ -17,7 +17,7 @@ export default function Intro() {
     return (
         <section
             ref={ref}
-            className='mb-28 py-16 h-[95vh] border border-black/25 overflow-hidden rounded-lg relative 
+            className='mb-28 py-16 h-[95vh] border border-black/25 overflow-hidden rounded-xl relative 
             text-center sm:mb-0 scroll-mt-[100rem]'
             id='home'
         >

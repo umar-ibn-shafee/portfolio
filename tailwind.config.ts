@@ -20,8 +20,8 @@ const config: Config = {
       animation: {
         'blob': 'blob 4s infinite',
         'reverse-blob': 'reverse-blob 4s infinite',
-        'corners': 'corners 20s infinite',
-        'go-rounds': 'go-rounds 20s infinite',
+        'corners': 'corners 15s infinite',
+        'go-rounds': 'go-rounds 10s infinite',
         'wave': 'wave 15s',
       },
       keyframes: {
@@ -37,39 +37,36 @@ const config: Config = {
           },
         },
         'go-rounds': {
-          '0%': {
+          '0%, 100%': {
             transform: "translate(0px, 0px) scale(1)"
           },
           '20%': {
             transform: "translate(-400px, -500px) scale(1.3)"
           },
           '30%': {
-            transform: "translate(-1000px, 0px) scale(0.8)"
+            transform: "translate(-1000px, 0px) scale(1.6)"
           },
           '40%': {
-            transform: "translate(-400px, -100px) scale(1.4)"
+            transform: "translate(-400px, -100px) scale(2)"
           },
           '50%': {
-            transform: "translate(200px, -500px) scale(2)"
+            transform: "translate(400px, -500px) scale(2.4)"
           },
           '60%': {
-            transform: "translate(-400px, -900px) scale(1.6)"
+            transform: "translate(-400px, -1100px) scale(2.2)"
           },
           '70%': {
             transform: "translate(-900px, -900px) scale(2)"
           },
           '80%': {
-            transform: "translate(-900px, -400px) scale(1.4)"
+            transform: "translate(-900px, -400px) scale(1.6)"
           },
           '90%': {
-            transform: "translate(-400px, 0px) scale(1.2)"
-          },
-          '100%': {
-            transform: "translate(0px, 0px) scale(1)"
-          },
+            transform: "translate(-400px, -500px) scale(1.3)"
+          }
         },
         'corners': {
-          '0%': {
+          '0%, 100%': {
             transform: "translate(0px, 0px) scale(1)"
           },
           '10%': {
@@ -98,9 +95,6 @@ const config: Config = {
           },
           '90%': {
             transform: "translate(-200px, -700px) scale(1.2)"
-          },
-          '100%': {
-            transform: "translate(0px, 0px) scale(1)"
           }
         },
         'blob': {

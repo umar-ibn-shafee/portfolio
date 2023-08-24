@@ -56,8 +56,8 @@ export default function RootLayout({
   return (
     <html lang="en" className='!scroll-smooth'>
       <body
-        className={`${neuefontAll.variable} ${robotoMono.variable} font-sans bg-slate-50 text-gray-950 relative pt-4 sm:pt-4
-      dark:bg-gray-950 dark:text-gray-50 dark:text-opacity-90`}>
+        className={`${neuefontAll.variable} ${robotoMono.variable} font-sans bg-slate-50 text-gray-950 relative 
+        pt-4 sm:pt-6 dark:bg-gray-950 dark:text-gray-50 dark:text-opacity-90`}>
         {/* <div
           className='bg-[#f79c9f] animate-reverse-blob mix-blend-multiply absolute -z-10 top-[-6rem] right-[11rem] 
         h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263] dark:mix-blend-normal'></div>
