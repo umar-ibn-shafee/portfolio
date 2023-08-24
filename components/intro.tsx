@@ -74,7 +74,7 @@ export default function Intro() {
                     Hello, I&apos;m <span className="font-bold">Umar Ibn Shafee</span> a{" "}
                     <span className="font-bold font-mono">Full-stack developer</span><br/> with{" "}
                     <span className="font-bold">6 years</span> of experience. I enjoy
-                    building <span className="italic">websites, SPA's & PWA's</span>. My focus is{" "}
+                    building <span className="italic">websites, SPA&apos;s & PWA&apos;s</span>. My focus is{" "}
                     <span className="underline">Frontend (React/Next.js, Angular, Vue)</span>.
                 </motion.h1>
 
