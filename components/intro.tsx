@@ -55,10 +55,10 @@ export default function Intro() {
                 className='bg-[#f63b6d] animate-go-rounds animation-delay-2000 transition-all mix-blend-multiply 
                 .animation-delay-4000 absolute -z-10 -bottom-[25rem] right-[5rem] h-[25rem] blur-[8rem] 
                 w-[25rem] rounded-full dark:bg-[#f63b6d] dark:mix-blend-normal'></div>
-            <div className='absolute bottom-4 right-16'>
+            <div className='absolute bottom-8 right-16'>
                 <Link
                     href={'#about'}
-                    className='flex gap-2 justify-center items-center text-base hover:underline underline-offset-4'
+                    className='flex gap-2 justify-center items-center text-base leading-4 hover:underline underline-offset-4'
                 >
                     <motion.p variants={sentance} initial='hidden' animate='visible'>
                         {animateText.split('').map((char, i) => (
