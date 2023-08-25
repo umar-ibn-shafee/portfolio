@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
-import { HiDownload } from 'react-icons/hi'
+import { HiArrowDown, HiDownload } from 'react-icons/hi'
 import { useSectioninview } from '@/lib/hooks';
 import { useActiveSectionContext } from '@/context/active-section-context';
 
@@ -13,6 +13,32 @@ export default function Intro() {
 
     const { ref } = useSectioninview('Home')
     const { setActiveSection } = useActiveSectionContext()
+
+    const animateText = 'Scroll for more'
+
+    const sentance = {
+        hidden: { opacity: 1 },
+        visible:
+        {
+            opacity: 1,
+            transition: {
+                delay: 0.5,
+                staggerChildren: 0.05,
+                staggerDirection: 1,
+            }
+        }
+    }
+
+    const letters = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: [1, 0.7, 0.5, 1],
+            transition: {
+                repeat: Infinity,
+                repeatDelay: 1.5
+            }
+        }
+    }
 
     return (
         <section
@@ -23,12 +49,28 @@ export default function Intro() {
         >
             <div
                 className='bg-[#614cf9] animate-corners transition-all mix-blend-multiply .animation-delay-4000 
-                absolute -z-10 -bottom-[25rem] left-[5rem] h-[25rem] blur-[10rem] w-[25rem] 
+                absolute -z-10 -bottom-[25rem] left-[5rem] h-[25rem] blur-[8rem] w-[25rem] 
                 rounded-full dark:bg-[#a89efa] dark:mix-blend-normal'></div>
             <div
                 className='bg-[#f63b6d] animate-go-rounds animation-delay-2000 transition-all mix-blend-multiply 
-                .animation-delay-4000 absolute -z-10 -bottom-[25rem] right-[5rem] h-[25rem] blur-[10rem] 
+                .animation-delay-4000 absolute -z-10 -bottom-[25rem] right-[5rem] h-[25rem] blur-[8rem] 
                 w-[25rem] rounded-full dark:bg-[#f63b6d] dark:mix-blend-normal'></div>
+            <div className='absolute bottom-4 right-16'>
+                <Link
+                    href={'#about'}
+                    className='flex gap-2 justify-center items-center text-base hover:underline underline-offset-4'
+                >
+                    <motion.p variants={sentance} initial='hidden' animate='visible'>
+                        {animateText.split('').map((char, i) => (
+                            <motion.span
+                                key={char + '-' + i}
+                                variants={letters}
+                            >{char}</motion.span>
+                        ))}
+                    </motion.p>
+                    <HiArrowDown className="animate-bounce transition-all" />
+                </Link>
+            </div>
             {/* <div className='flex items-center justify-center'> */}
             {/* <div className='relative'> */}
             {/* <motion.div
@@ -72,7 +114,7 @@ export default function Intro() {
                     animate={{ opacity: 1, y: 0 }}
                 >
                     Hello, I&apos;m <span className="font-bold">Umar Ibn Shafee</span> a{" "}
-                    <span className="font-bold font-mono">Full-stack developer</span><br/> with{" "}
+                    <span className="font-bold font-mono">Full-stack developer</span><br /> with{" "}
                     <span className="font-bold">6 years</span> of experience. I enjoy
                     building <span className="italic">websites, SPA&apos;s & PWA&apos;s</span>. My focus is{" "}
                     <span className="underline">Frontend (React/Next.js, Angular, Vue)</span>.
