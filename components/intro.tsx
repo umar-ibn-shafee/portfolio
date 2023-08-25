@@ -58,7 +58,7 @@ export default function Intro() {
             <div className='absolute bottom-8 right-16'>
                 <Link
                     href={'#about'}
-                    className='flex gap-2 justify-center items-center text-base leading-4 hover:underline underline-offset-4'
+                    className='flex gap-2 justify-center items-center text-sm leading-4 hover:underline underline-offset-4'
                 >
                     <motion.p variants={sentance} initial='hidden' animate='visible'>
                         {animateText.split('').map((char, i) => (
@@ -131,7 +131,7 @@ export default function Intro() {
                     <Link
                         href={"#contact"}
                         className='group bg-gray-900 text-white px-7 py-3 flex justify-center items-center gap-2 
-                    rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 
+                    rounded-full outline-none hover:bg-gray-950 focus:scale-110 hover:scale-110 active:scale-105 
                     transition-all'
                         onClick={() => setActiveSection('Contact')}
                     >
