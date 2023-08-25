@@ -9,6 +9,9 @@
     .animation-delay-4000 {
         animation-delay: 4s;
     }
+    .hide-border-overflow {
+        -webkit-mask-image: -webkit-radial-gradient(white, black);
+    }
 }
 
 html {
