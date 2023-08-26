@@ -40,7 +40,7 @@ export default function Contact() {
           placeholder='Your message' />
         <button
           className='group flex items-center justify-center gap-2 h-[3rem] w-[8rem] 
-          bg-gray-900 text-white rounded-full transition-all outline-none
+          bg-gray-900 text-white rounded-xl transition-all outline-none
           hover:bg-black hover:scale-110 focus:scale-110 active:scale-105
           dark:bg-white dark:bg-opacity-10'
           type='submit'

@@ -102,7 +102,7 @@ export default function Intro() {
                     <Link
                         href={"#contact"}
                         className='group bg-black text-white px-7 py-3 flex justify-center items-center gap-2 
-                    rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 
+                    rounded-xl outline-none focus:scale-110 hover:scale-110 active:scale-105 
                     transition-all'
                         onClick={() => setActiveSection('Contact')}
                     >
@@ -110,7 +110,7 @@ export default function Intro() {
                     </Link>
 
                     <a
-                        className='group bg-white px-7 py-3 flex justify-center items-center gap-2 rounded-full 
+                        className='group bg-white px-7 py-3 flex justify-center items-center gap-2 rounded-xl 
                     outline-none focus:scale-110 hover:scale-110 active:scale-105 transition-all border 
                     border-black/10 dark:bg-white/10'
                         href='/Umar-CV.pdf'
@@ -121,7 +121,7 @@ export default function Intro() {
 
                     <a
                         className='bg-white p-4 text-gray-600 hover:text-black flex justify-center items-center 
-                    gap-2 rounded-full outline-none focus:scale-25 hover:scale-125 active:scale-105 transition-all 
+                    gap-2 rounded-xl outline-none focus:scale-25 hover:scale-125 active:scale-105 transition-all 
                     border border-black/10 dark:bg-white/10 dark:text-white/70'
                         href='https://www.linkedin.com/in/umar-ibn-shafee/'
                         target='_blank'
@@ -131,7 +131,7 @@ export default function Intro() {
 
                     <a
                         className='bg-white p-4 text-gray-600 hover:text-black flex justify-center items-center 
-                    gap-2 rounded-full outline-none focus:scale-125 hover:scale-125 active:scale-105 transition-all
+                    gap-2 rounded-xl outline-none focus:scale-125 hover:scale-125 active:scale-105 transition-all
                     border border-black/10 dark:bg-white/10 dark:text-white/70'
                         href='https://github.com/umar-ibn-shafee'
                         target='_blank'

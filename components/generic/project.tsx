@@ -47,7 +47,7 @@ export default function Project({ title, description, tags, imageUrl }: Props) {
                             <li
                                 key={i}
                                 className='bg-black/[0.9] px-3 py-1 text-white text-[0.7rem] uppercase 
-                                tracking-wider rounded-full dark:text-white/70'
+                                tracking-wider rounded-lg dark:text-white/70'
                             >
                                 {tag}
                             </li>

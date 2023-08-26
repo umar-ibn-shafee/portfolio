@@ -37,7 +37,7 @@ export default function Header() {
                                     key={link.hash}
                                     className={clsx(`hover:underline underline-offset-4`,
                                         {
-                                            'hover:no-underline border border-black/10 bg-black text-white dark:border-white/10 dark:bg-white/10 dark:backdrop-blur-[0.5rem] -ml-4 px-4 py-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition-all'
+                                            'hover:no-underline border border-black/10 bg-black text-white dark:border-white/10 dark:bg-white/10 dark:backdrop-blur-[0.5rem] -ml-4 px-4 py-2 rounded-xl focus:scale-110 hover:scale-110 active:scale-105 transition-all'
                                                 : link.name === 'Contact'
                                         })}
                                 >
@@ -54,7 +54,7 @@ export default function Header() {
                     <motion.div
                         className='fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-gray-300/40 
                      bg-white bg-opacity-60 shadow-lg shadow-black/5 dark:shadow-white/5
-                    backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full 
+                    backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-xl 
                     dark:bg-gray-950 dark:bg-opacity-60 dark:border-gray-700/40'
                         initial={{ y: -100, x: "-50%", opacity: 0 }}
                         animate={{ y: 0, x: "-50%", opacity: 1 }}
@@ -92,7 +92,7 @@ export default function Header() {
 
                                         {link.name === activeSection && (
                                             <motion.span
-                                                className='absolute rounded-full bg-gray-200 inset-0 -z-10 dark:bg-gray-700'
+                                                className='absolute rounded-xl bg-gray-200 inset-0 -z-10 dark:bg-gray-700'
                                                 layoutId='activeSection'
                                                 transition={{
                                                     type: 'spring',
