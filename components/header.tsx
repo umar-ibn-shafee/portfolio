@@ -23,7 +23,8 @@ export default function Header() {
                         <ul className='flex flex-row items-center gap-10'>
                             {links.map(link => link.name !== 'Home' && (
                                 <li
-                                    className={clsx(`hover:underline underline-offset-4`,{ 'hover:no-underline border border-black/10 bg-black text-white dark:border-white/10 dark:bg-white/10 dark:backdrop-blur-[0.5rem] -ml-4 px-4 py-1 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition-all': link.name === 'Contact' })}
+                                    key={link.hash}
+                                    className={clsx(`hover:underline underline-offset-4`, { 'hover:no-underline border border-black/10 bg-black text-white dark:border-white/10 dark:bg-white/10 dark:backdrop-blur-[0.5rem] -ml-4 px-4 py-1 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition-all': link.name === 'Contact' })}
                                 >
                                     <Link href={link.hash}>{link.name}</Link>
                                 </li>))}
