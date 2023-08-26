@@ -6,6 +6,7 @@ import { links } from "@/lib/data";
 import Link from 'next/link';
 import clsx from 'clsx'
 import { useActiveSectionContext } from '@/context/active-section-context';
+import FlowText from './generic/flow-text';
 
 export default function Header() {
 
@@ -17,16 +18,26 @@ export default function Header() {
                 (<div>
                     <nav
                         className='fixed top-10 h-[3.5rem] w-full bg-white bg-opacity-0 px-20 flex flex-row 
-                justify-between items-center font-base text-sm leading-4'
+                justify-between items-center font-medium text-sm leading-4'
                     >
-                        <div>Mohammed Umar</div>
+                        <div className='cursor-pointer'>
+                            <FlowText text='Mohammed Umar' onHover={true} />
+                        </div>
                         <ul className='flex flex-row items-center gap-10'>
                             {links.map(link => link.name !== 'Home' && (
                                 <li
                                     key={link.hash}
-                                    className={clsx(`hover:underline underline-offset-4`, { 'hover:no-underline border border-black/10 bg-black text-white dark:border-white/10 dark:bg-white/10 dark:backdrop-blur-[0.5rem] -ml-4 px-4 py-1 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition-all': link.name === 'Contact' })}
+                                    className={clsx(`hover:underline underline-offset-4`,
+                                        {
+                                            'hover:no-underline border border-black/10 bg-black text-white dark:border-white/10 dark:bg-white/10 dark:backdrop-blur-[0.5rem] -ml-4 px-4 py-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition-all'
+                                                : link.name === 'Contact'
+                                        })}
                                 >
-                                    <Link href={link.hash}>{link.name}</Link>
+                                    <Link href={link.hash}>
+                                        {link.name === 'Contact' ? link.name : (
+                                            <FlowText text={link.name} onHover={true} />
+                                        )}
+                                    </Link>
                                 </li>))}
                         </ul>
                     </nav>
