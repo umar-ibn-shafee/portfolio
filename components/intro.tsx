@@ -32,7 +32,7 @@ export default function Intro() {
                 className='bg-[#f63b6d] animate-go-rounds animation-delay-2000 transition-all mix-blend-multiply 
                 .animation-delay-4000 absolute -z-10 -bottom-[25rem] right-[5rem] h-[25rem] blur-[8rem] 
                 w-[25rem] rounded-full dark:bg-[#f63b6d] dark:mix-blend-normal'></div>
-            <div className='absolute bottom-8 right-16'>
+            <div className='absolute sm:md:bottom-8 sm:md:right-16 bottom-8 right-[33%]'>
                 <Link
                     href={'#about'}
                     className='flex gap-2 justify-center items-center font-medium text-sm leading-4 
@@ -78,14 +78,14 @@ export default function Intro() {
 
             {/* max-w-[50rem] */}
 
-            <div className='flex flex-col items-start justify-center h-[90vh] sm:px-44 px-12'>
+            <div className='flex flex-col sm:md:items-start items-center justify-center h-[90vh] md:px-20 sm:px-40 px-4'>
                 <motion.h1
-                    className='mb-10 px-4 text-left text-2xl font-normal !leading-[1.5] sm:text-4xl'
+                    className='mb-10 px-4 text-left text-xl font-normal !leading-[1.5] sm:text-4xl'
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
                 >
-                    Hello, I&apos;m <span className="font-bold">Umar Ibn Shafee</span> a{" "}
-                    <span className="font-bold font-mono">Full-stack developer</span><br /> with{" "}
+                    Hello, I&apos;m <span className="font-bold">Mohammed Umar</span> a{" "}
+                    <span className="font-bold font-mono">Full-stack developer.</span><br /> With{" "}
                     <span className="font-bold">6 years</span> of experience. I enjoy
                     building <span className="italic">websites, SPA&apos;s & PWA&apos;s</span>. My focus is{" "}
                     <span className="underline">Frontend (React/Next.js, Angular, Vue)</span>.
