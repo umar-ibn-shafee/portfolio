@@ -15,7 +15,15 @@ export default function Header() {
     return (
         <header className='z-[999] relative'>
             {activeSection === 'Home' ?
-                (<div>
+                (<motion.div
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{
+                        type: 'spring',
+                        stiffness: 300,
+                        duration: 0.4
+                    }}
+                >
                     <nav
                         className='fixed top-10 h-[3.5rem] w-full bg-white bg-opacity-0 px-20 flex flex-row 
                 justify-between items-center font-medium text-sm leading-4'
@@ -41,15 +49,20 @@ export default function Header() {
                                 </li>))}
                         </ul>
                     </nav>
-                </div>) :
+                </motion.div>) :
                 (<div>
                     <motion.div
-                        className='fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white 
-                    border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] 
+                        className='fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-gray-300/40 
+                     bg-white bg-opacity-60 shadow-lg shadow-black/5 dark:shadow-white/5
                     backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full 
-                    dark:bg-gray-950 dark:bg-opacity-70 dark:border-black/40'
+                    dark:bg-gray-950 dark:bg-opacity-60 dark:border-gray-700/40'
                         initial={{ y: -100, x: "-50%", opacity: 0 }}
                         animate={{ y: 0, x: "-50%", opacity: 1 }}
+                        transition={{
+                            type: 'spring',
+                            stiffness: 300,
+                            duration: 0.4
+                        }}
                     ></motion.div>
                     <nav
                         className='flex fixed top-[0.15rem] left-1/2 -translate-x-1/2 h-12 py-2 sm:top-[1.7rem] 
