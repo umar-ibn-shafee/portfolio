@@ -8,6 +8,7 @@ import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiArrowDown, HiDownload } from 'react-icons/hi'
 import { useSectioninview } from '@/lib/hooks';
 import { useActiveSectionContext } from '@/context/active-section-context';
+import FlowText from './generic/flow-text';
 
 export default function Intro() {
 
@@ -15,30 +16,6 @@ export default function Intro() {
     const { setActiveSection } = useActiveSectionContext()
 
     const animateText = 'Scroll for more'
-
-    const sentance = {
-        hidden: { opacity: 1 },
-        visible:
-        {
-            opacity: 1,
-            transition: {
-                delay: 0.5,
-                staggerChildren: 0.05,
-                staggerDirection: 1,
-            }
-        }
-    }
-
-    const letters = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: [1, 0.7, 0.5, 1],
-            transition: {
-                repeat: Infinity,
-                repeatDelay: 1.5
-            }
-        }
-    }
 
     return (
         <section
@@ -58,16 +35,10 @@ export default function Intro() {
             <div className='absolute bottom-8 right-16'>
                 <Link
                     href={'#about'}
-                    className='flex gap-2 justify-center items-center text-sm leading-4 hover:underline underline-offset-4'
+                    className='flex gap-2 justify-center items-center font-medium text-sm leading-4 
+                    hover:underline underline-offset-4'
                 >
-                    <motion.p variants={sentance} initial='hidden' animate='visible'>
-                        {animateText.split('').map((char, i) => (
-                            <motion.span
-                                key={char + '-' + i}
-                                variants={letters}
-                            >{char}</motion.span>
-                        ))}
-                    </motion.p>
+                    <FlowText text={animateText} onHover={false} />
                     <HiArrowDown className="animate-bounce transition-all" />
                 </Link>
             </div>
