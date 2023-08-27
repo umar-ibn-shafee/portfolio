@@ -25,7 +25,7 @@ export default function Header() {
                         before:bottom-[30%] before:h-[0.4rem] before:w-[0.4rem] before:rounded-full"
                         onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
                     >
-                        Menu
+                        <FlowText text='Menu' onHover={true} />
                     </div>
                 </nav>
                 {isMobileNavOpen && (
@@ -36,12 +36,12 @@ export default function Header() {
                                 flex flex-col items-start gap-6 py-8'
                             >
                                 <div
-                                    className='px-4 py-2 bg-black text-white dark:bg-white/10 backdrop-blur-[0.5rem] border-black/25 rounded-xl self-end'
+                                    className='px-4 py-2 cursor-pointer bg-black text-white dark:bg-white/10 backdrop-blur-[0.5rem] border-black/25 rounded-xl self-end'
                                     onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
                                 >
                                     Close
                                 </div>
-                                <div className='uppercase font-thin text-xs text-white'>Navigation</div>
+                                <div className='uppercase font-thin text-xs dark:text-white'>Navigation</div>
                                 <div className='h-[0.05rem] w-[100%] bg-black dark:bg-slate-50 rounded-xl'></div>
                                 <ul className='w-[100%] flex flex-col items-start font-medium text-5xl gap-5'>
                                     {links.map(link => (
