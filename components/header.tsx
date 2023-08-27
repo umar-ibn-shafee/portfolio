@@ -109,6 +109,7 @@ export default function Header() {
                                             <div className='w-full flex flex-row justify-between font-medium text-base'>
                                                 {socials.map((social, index) => (
                                                     <motion.a
+                                                        key={index}
                                                         href={social.link}
                                                         target='_blank'
                                                         variants={itemSlide}
