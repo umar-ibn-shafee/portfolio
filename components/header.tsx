@@ -132,18 +132,10 @@ export default function Header() {
             </div>
             <div className='sm:flex hidden'>
                 {activeSection === 'Home' ?
-                    (<motion.div
-                        initial={{ y: 50, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{
-                            type: 'spring',
-                            stiffness: 300,
-                            duration: 0.4
-                        }}
-                    >
+                    (<div>
                         <nav
                             className='fixed top-10 h-[3.5rem] w-full bg-white bg-opacity-0 md:px-20 sm:px-16 flex flex-row 
-                justify-between items-center font-medium text-sm leading-4'
+                            justify-between items-center font-medium text-sm leading-4'
                         >
                             <div className='cursor-pointer'>
                                 <FlowText text='Mohammed Umar' onHover={true} />
@@ -166,7 +158,7 @@ export default function Header() {
                                     </li>))}
                             </ul>
                         </nav>
-                    </motion.div>) :
+                    </div>) :
                     (<div>
                         <motion.div
                             className='fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-gray-300/40 
