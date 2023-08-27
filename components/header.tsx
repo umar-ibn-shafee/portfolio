@@ -68,7 +68,7 @@ export default function Header() {
                         <section>
                             <nav>
                                 <motion.div
-                                    className='bg-slate-50 dark:bg-black fixed top-0 w-[100vw] h-[100vh] px-4
+                                    className='bg-slate-50 dark:bg-black fixed top-0 left-0 w-[100vw] h-[100vh] px-4
                                 flex flex-col items-start py-8'
                                     variants={menuSlide}
                                     animate='enter'
