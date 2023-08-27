@@ -44,7 +44,14 @@ export default function Header() {
     return (
         <header className='z-[999] relative'>
             <div className='sm:hidden'>
-                <nav className='fixed top-10 w-full flex flex-row items-center justify-between font-medium text-sm px-10'>
+                <nav
+                    className={clsx(`fixed top-10 w-full flex flex-row items-center justify-between font-medium 
+                    text-sm px-10`,
+                        {
+                            'border rounded-xl border-gray-300/40 bg-white/20 shadow-lg shadow-black/5 dark:shadow-white/5 dark:bg-gray-950 dark:bg-opacity-20 dark:border-gray-700/40 backdrop-blur-[0.5rem] py-4 px-4 mx-4 w-[90vw]'
+                                : activeSection !== 'Home'
+                        })}
+                >
                     <Link href={'#home'} className='cursor-pointer'>
                         <FlowText text='Mohammed Umar' onHover={true} />
                     </Link>
