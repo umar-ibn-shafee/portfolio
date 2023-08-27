@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion } from "framer-motion";
-import { links } from "@/lib/data";
+import { AnimatePresence, motion } from "framer-motion";
+import { links, socials } from "@/lib/data";
 import Link from 'next/link';
 import clsx from 'clsx'
 import { useActiveSectionContext } from '@/context/active-section-context';
@@ -12,6 +12,34 @@ export default function Header() {
 
     const { activeSection, setActiveSection } = useActiveSectionContext()
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
+
+    const menuSlide = {
+        initial: {
+            x: '100%'
+        },
+        enter: {
+            x: '0%',
+            transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] }
+        },
+        exit: {
+            x: '100%',
+            transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] }
+        }
+    }
+
+    const itemSlide = {
+        initial: {
+            x: '100%'
+        },
+        enter: (i: number) => ({
+            x: '0%',
+            transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.05 * i }
+        }),
+        exit: (i: number) => ({
+            x: '100%',
+            transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.05 * i }
+        })
+    }
 
     return (
         <header className='z-[999] relative'>
@@ -28,72 +56,78 @@ export default function Header() {
                         <FlowText text='Menu' onHover={true} />
                     </div>
                 </nav>
-                {isMobileNavOpen && (
-                    <section>
-                        <nav>
-                            <div
-                                className='bg-slate-50 dark:bg-black fixed top-0 w-[100vw] h-[100vh] px-4
+                <AnimatePresence mode='wait'>
+                    {isMobileNavOpen && (
+                        <section>
+                            <nav>
+                                <motion.div
+                                    className='bg-slate-50 dark:bg-black fixed top-0 w-[100vw] h-[100vh] px-4
                                 flex flex-col items-start py-8'
-                            >
-                                <div
-                                    className='px-4 py-2 cursor-pointer bg-black text-white dark:bg-white/10 backdrop-blur-[0.5rem] border-black/25 rounded-xl self-end'
-                                    onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
+                                    variants={menuSlide}
+                                    animate='enter'
+                                    exit='exit'
+                                    initial='initial'
                                 >
-                                    Close
-                                </div>
-                                <div className='mt-12 flex-1 flex flex-col justify-between w-full'>
-                                    <div className='flex flex-col items-start gap-6 py-8 w-full'>
-                                        <div className='uppercase font-thin text-xs dark:text-white'>Navigation</div>
-                                        <div className='h-[0.05rem] w-[100%] bg-black dark:bg-slate-50 rounded-xl'></div>
-                                        <ul className='w-[100%] flex flex-col items-start font-medium text-5xl gap-5'>
-                                            {links.map(link => (
-                                                <li
-                                                    key={link.hash}
-                                                    className='min-w-full'
-                                                >
-                                                    <Link
-                                                        href={link.hash}
-                                                        className='flex flex-row justify-between items-center'
-                                                        onClick={() => {
-                                                            setIsMobileNavOpen(!isMobileNavOpen)
-                                                            setActiveSection(link.name)
-                                                        }}
-                                                    >
-                                                        <FlowText text={link.name} onHover={true} />
-                                                        {link.name === activeSection && (<div className='mr-6 h-[0.6rem] w-[0.6rem] bg-black dark:bg-gray-50 rounded-full'></div>)}
-                                                    </Link>
-                                                </li>))}
-                                        </ul>
+                                    <div
+                                        className='px-4 py-2 cursor-pointer bg-black text-white dark:bg-white/10 backdrop-blur-[0.5rem] border-black/25 rounded-xl self-end'
+                                        onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
+                                    >
+                                        Close
                                     </div>
-                                    <div className='flex flex-col items-start gap-6 py-8 w-full'>
-                                        <div className='uppercase font-thin text-xs dark:text-white'>Socials</div>
-                                        <div className='h-[0.05rem] w-[100%] bg-black dark:bg-slate-50 rounded-xl'></div>
-                                        <div className='w-full flex flex-row justify-between font-medium text-base'>
-                                            <a
-                                                href='https://www.linkedin.com/in/umar-ibn-shafee/'
-                                                target='_blank'
-                                            >
-                                                LinkedIn
-                                            </a>
-                                            <a
-                                                href='https://github.com/umar-ibn-shafee'
-                                                target='_blank'
-                                            >Github</a>
-                                            <a
-                                                href='https://twitter.com/IbnShafee'
-                                                target='_blank'
-                                            >Twitter</a>
-                                            <a
-                                                href='https://www.instagram.com/ibnshafee_dev/'
-                                                target='_blank'
-                                            >Instagram</a>
+                                    <div className='mt-12 flex-1 flex flex-col justify-between w-full'>
+                                        <div className='flex flex-col items-start gap-6 py-8 w-full'>
+                                            <div className='uppercase font-thin text-xs dark:text-white'>Navigation</div>
+                                            <div className='h-[0.05rem] w-[100%] bg-black dark:bg-slate-50 rounded-xl'></div>
+                                            <ul className='w-[100%] flex flex-col items-start font-medium text-5xl gap-5'>
+                                                {links.map((link, index) => (
+                                                    <motion.li
+                                                        key={link.hash}
+                                                        className='min-w-full'
+                                                        variants={itemSlide}
+                                                        animate='enter'
+                                                        exit='exit'
+                                                        initial='initial'
+                                                        custom={index}
+                                                    >
+                                                        <Link
+                                                            href={link.hash}
+                                                            className='flex flex-row justify-between items-center'
+                                                            onClick={() => {
+                                                                setIsMobileNavOpen(!isMobileNavOpen)
+                                                                setActiveSection(link.name)
+                                                            }}
+                                                        >
+                                                            <FlowText text={link.name} onHover={true} />
+                                                            {link.name === activeSection && (<div className='mr-6 h-[0.6rem] w-[0.6rem] bg-black dark:bg-gray-50 rounded-full'></div>)}
+                                                        </Link>
+                                                    </motion.li>))}
+                                            </ul>
+                                        </div>
+                                        <div className='flex flex-col items-start gap-6 py-8 w-full'>
+                                            <div className='uppercase font-thin text-xs dark:text-white'>Socials</div>
+                                            <div className='h-[0.05rem] w-[100%] bg-black dark:bg-slate-50 rounded-xl'></div>
+                                            <div className='w-full flex flex-row justify-between font-medium text-base'>
+                                                {socials.map((social, index) => (
+                                                    <motion.a
+                                                        href={social.link}
+                                                        target='_blank'
+                                                        variants={itemSlide}
+                                                        animate='enter'
+                                                        exit='exit'
+                                                        initial='initial'
+                                                        custom={index}
+                                                    >
+                                                        {social.name}
+                                                    </motion.a>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </nav>
-                    </section>
-                )}
+                                </motion.div>
+                            </nav>
+                        </section>
+                    )}
+                </AnimatePresence>
             </div>
             <div className='sm:flex hidden'>
                 {activeSection === 'Home' ?

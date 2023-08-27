@@ -105,3 +105,22 @@ export const skillsData = [
     "Django",
     "Framer Motion",
 ] as const;
+
+export const socials = [
+    {
+        name: 'LinkedIn',
+        link: 'https://www.linkedin.com/in/umar-ibn-shafee/'
+    },
+    {
+        name: 'Github',
+        link: 'https://github.com/umar-ibn-shafee'
+    },
+    {
+        name: 'Twitter',
+        link: 'https://twitter.com/IbnShafee'
+    },
+    {
+        name: 'Instagram',
+        link: 'https://www.instagram.com/ibnshafee_dev/'
+    }
+] as const;
