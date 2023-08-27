@@ -33,7 +33,7 @@ export default function Header() {
                         <nav>
                             <div
                                 className='bg-slate-50 dark:bg-black fixed top-0 w-[100vw] h-[100vh] px-4
-                                flex flex-col items-start gap-6 py-8'
+                                flex flex-col items-start py-8'
                             >
                                 <div
                                     className='px-4 py-2 cursor-pointer bg-black text-white dark:bg-white/10 backdrop-blur-[0.5rem] border-black/25 rounded-xl self-end'
@@ -41,27 +41,55 @@ export default function Header() {
                                 >
                                     Close
                                 </div>
-                                <div className='uppercase font-thin text-xs dark:text-white'>Navigation</div>
-                                <div className='h-[0.05rem] w-[100%] bg-black dark:bg-slate-50 rounded-xl'></div>
-                                <ul className='w-[100%] flex flex-col items-start font-medium text-5xl gap-5'>
-                                    {links.map(link => (
-                                        <li
-                                            key={link.hash}
-                                            className='min-w-full'
-                                        >
-                                            <Link
-                                                href={link.hash}
-                                                className='flex flex-row justify-between items-center'
-                                                onClick={() => {
-                                                    setIsMobileNavOpen(!isMobileNavOpen)
-                                                    setActiveSection(link.name)
-                                                }}
+                                <div className='mt-12 flex-1 flex flex-col justify-between w-full'>
+                                    <div className='flex flex-col items-start gap-6 py-8 w-full'>
+                                        <div className='uppercase font-thin text-xs dark:text-white'>Navigation</div>
+                                        <div className='h-[0.05rem] w-[100%] bg-black dark:bg-slate-50 rounded-xl'></div>
+                                        <ul className='w-[100%] flex flex-col items-start font-medium text-5xl gap-5'>
+                                            {links.map(link => (
+                                                <li
+                                                    key={link.hash}
+                                                    className='min-w-full'
+                                                >
+                                                    <Link
+                                                        href={link.hash}
+                                                        className='flex flex-row justify-between items-center'
+                                                        onClick={() => {
+                                                            setIsMobileNavOpen(!isMobileNavOpen)
+                                                            setActiveSection(link.name)
+                                                        }}
+                                                    >
+                                                        <FlowText text={link.name} onHover={true} />
+                                                        {link.name === activeSection && (<div className='mr-6 h-[0.6rem] w-[0.6rem] bg-black dark:bg-gray-50 rounded-full'></div>)}
+                                                    </Link>
+                                                </li>))}
+                                        </ul>
+                                    </div>
+                                    <div className='flex flex-col items-start gap-6 py-8 w-full'>
+                                        <div className='uppercase font-thin text-xs dark:text-white'>Socials</div>
+                                        <div className='h-[0.05rem] w-[100%] bg-black dark:bg-slate-50 rounded-xl'></div>
+                                        <div className='w-full flex flex-row justify-between font-medium text-base'>
+                                            <a
+                                                href='https://www.linkedin.com/in/umar-ibn-shafee/'
+                                                target='_blank'
                                             >
-                                                <FlowText text={link.name} onHover={true} />
-                                                {link.name === activeSection && (<div className='mr-6 h-[0.6rem] w-[0.6rem] bg-black dark:bg-gray-50 rounded-full'></div>)}
-                                            </Link>
-                                        </li>))}
-                                </ul>
+                                                LinkedIn
+                                            </a>
+                                            <a
+                                                href='https://github.com/umar-ibn-shafee'
+                                                target='_blank'
+                                            >Github</a>
+                                            <a
+                                                href='https://twitter.com/IbnShafee'
+                                                target='_blank'
+                                            >Twitter</a>
+                                            <a
+                                                href='https://www.instagram.com/ibnshafee_dev/'
+                                                target='_blank'
+                                            >Instagram</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </nav>
                     </section>
