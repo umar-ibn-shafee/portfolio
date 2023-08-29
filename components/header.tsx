@@ -86,7 +86,7 @@ export default function Header() {
                                             <div className='uppercase font-thin text-xs dark:text-white'>Navigation</div>
                                             <div className='h-[0.05rem] w-[100%] bg-black dark:bg-slate-50 rounded-xl'></div>
                                             <ul className='w-[100%] flex flex-col items-start font-medium text-5xl gap-5'>
-                                                {links.map((link, index) => (
+                                                {links.filter(item => item.name !== 'Projects' ).map((link, index) => (
                                                     <motion.li
                                                         key={link.hash}
                                                         className='min-w-full'
@@ -148,7 +148,7 @@ export default function Header() {
                                 <FlowText text='Mohammed Umar' onHover={true} />
                             </div>
                             <ul className='flex flex-row items-center md:gap-10 sm:gap-6'>
-                                {links.map(link => link.name !== 'Home' && (
+                                {links.filter(item => item.name !== 'Projects' ).map(link => link.name !== 'Home' && (
                                     <li
                                         key={link.hash}
                                         className={clsx(`hover:underline underline-offset-4`,
@@ -188,7 +188,7 @@ export default function Header() {
                                 className='flex w-[22rem] flex-wrap items-center justify-center gap-y-5 text-[0.9rem] 
                         font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5'
                             >
-                                {links.map(link => (
+                                {links.filter(item => item.name !== 'Projects' ).map(link => (
                                     <motion.li
                                         className='h-3/4 flex items-center justify-center relative'
                                         key={link.hash}
