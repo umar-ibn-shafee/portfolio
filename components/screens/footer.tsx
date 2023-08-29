@@ -6,7 +6,7 @@ import FlowText from '../generic/flow-text'
 
 export default function Footer() {
   return (
-    <footer className='mb-6 px-12 text-gray-500 dark:text-white flex flex-col-reverse gap-8 sm:flex-row sm:justify-between items-start'>
+    <footer className='mb-6 px-12 xl:px-24 text-gray-500 dark:text-white flex flex-col-reverse gap-8 sm:flex-row sm:justify-between items-start'>
       <div className='flex flex-col items-start gap-2 text-xs'>
         <div className='uppercase font-thin'>Version</div>
         <small className='block text-xs'>
