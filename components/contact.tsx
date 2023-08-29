@@ -15,7 +15,7 @@ export default function Contact() {
   return (
     <motion.section
       ref={ref}
-      className='scroll-mt-28 text-center mb-20 sm:mb-28 w-[100%] pr-28'
+      className='scroll-mt-28 text-center mb-20 sm:mb-28 w-[100%] sm:pr-28'
       id='contact'
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -34,7 +34,7 @@ export default function Contact() {
         >
           me@ibnshafee.dev
         </a> or through this form</p> */}
-      <div className='flex flex-col sm:flex-row items-start gap-20'>
+      <div className='flex flex-col-reverse sm:flex-row items-start gap-20'>
         <form className='flex flex-col dark:text-black flex-auto'>
           <input
             className='rounded-lg borderBlack h-14 p-4 dark:bg-slate-50 transition-all outline-none'
