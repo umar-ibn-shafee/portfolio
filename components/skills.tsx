@@ -24,9 +24,13 @@ export default function Skills() {
   const { ref } = useSectioninview('Skills')
   return (
     <section ref={ref} className='mb-28 max-w-[53rem] text-center sm:mb-40 scroll-mt-28' id='skills'>
-      <SectionHeading>
+      {/* <SectionHeading>
         My Skills
-      </SectionHeading>
+      </SectionHeading> */}
+
+      <h2 className='text-6xl font-bold capitalize text-center mb-12'>
+        My Skills
+      </h2>
 
       <ul className='flex  flex-wrap gap-2 justify-center text-lg text-gray-800'>
         {skillsData.map((skill, i) => (
