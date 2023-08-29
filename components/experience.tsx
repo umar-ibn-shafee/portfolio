@@ -11,7 +11,7 @@ import { useThemeContext } from '@/context/theme-context';
 
 export default function Experience() {
 
-  const { ref } = useSectioninview('Experience')
+  const { ref } = useSectioninview('Experience', 0.25)
   const { theme } = useThemeContext()
   const [showMore, setShowMore] = useState<number[]>([])
 
