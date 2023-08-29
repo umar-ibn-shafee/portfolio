@@ -32,7 +32,10 @@ export default function Experience() {
 
   return (
     <section ref={ref} className='scroll-mt-28 sm:mb-40 mb-28' id='experience'>
-      <SectionHeading>My Experience</SectionHeading>
+      {/* <SectionHeading>My Experience</SectionHeading> */}
+      <h2 className='text-6xl font-bold capitalize text-center mb-12'>
+        My Experience
+      </h2>
       <VerticalTimeline lineColor=''>
         {
           experiencesData.map((item, i) => (
