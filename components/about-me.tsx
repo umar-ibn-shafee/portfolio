@@ -51,16 +51,16 @@ export default function AboutMe() {
             <div className='flex flex-col-reverse gap-20 text-center lg:text-left lg:flex-row justify-center lg:justify-between items-center'>
                 <p className='mb-3 max-w-[45rem] lg:pr-24'>
                     I am a JavaScript Frontend Developer with 6 years of experience.<br /><br />
-                    I've experience developing high quality, well tested web applications with TypeScript and
+                    I&apos;ve experience developing high quality, well tested web applications with TypeScript and
                     all the major frontend frameworks like React, Vue, Angular and server rendered applications with
                     meta frameworks like NextJS, NuxtJS for improved SEO, initial load time and performance of
                     web applications. I can even build RESTful API backends with Node, Express, NestJS, Prisma,
-                    Mongoose, Mongo and Postgres. And I've deployment experience with AWS and Vercel.<br />
+                    Mongoose, Mongo and Postgres. And I&apos;ve deployment experience with AWS and Vercel.<br />
                     I&apos;m very proficient with TypeScript & JavaScript and it&apos;s modern ES6+ syntax and features.
                     I&apos;ve good knowledge of JavaScript compiler like Babel and bundlers like Webpack, Vite and esbuild.
                     I&apos;ve experience writing unit tests and end to end tests using Jest & Cypress and
                     implementing CI/CD pipelines. And I&apos;m well versed with Git.<br /><br />
-                    I’ve build well tested, high quality, large-scale web applications in past like PizzaHut,
+                    I&apos;ve build well tested, high quality, large-scale web applications in past like PizzaHut,
                     Fabindia, KFC, CatchThatBus, Little Caesar, inseego Connect, Blokbot.
                 </p>
                 <div className='relative h-96 w-96 flex-none'>
