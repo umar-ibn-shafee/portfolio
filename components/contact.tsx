@@ -80,8 +80,9 @@ export default function Contact() {
           <div className='flex flex-col gap-2 items-start justify-start'>
             <div className='uppercase font-thin text-xs'>Socials</div>
             <div className='text-left flex flex-row gap-2'>
-              {socials.map(social => (
+              {socials.map((social, i) => (
                 <a
+                  key={i}
                   className='hover:underline underline-offset-4'
                   href={social.link}
                   target='_blank'
