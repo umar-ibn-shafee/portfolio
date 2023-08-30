@@ -5,6 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
+import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 
 export const links = [
     {
@@ -103,7 +104,7 @@ export const experiencesData = [
 
 export const projectsData = [
     {
-        title: "CorpComment",
+        title: "PizzaHut",
         description:
             "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
         tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
@@ -168,18 +169,22 @@ export const skillsData = [
 export const socials = [
     {
         name: 'LinkedIn',
+        icon: React.createElement(BsLinkedin),
         link: 'https://www.linkedin.com/in/umar-ibn-shafee/'
     },
     {
         name: 'Github',
+        icon: React.createElement(BsGithub),
         link: 'https://github.com/umar-ibn-shafee'
     },
     {
         name: 'Twitter',
+        icon: React.createElement(BsTwitter),
         link: 'https://twitter.com/IbnShafee'
     },
     {
         name: 'Instagram',
+        icon: React.createElement(BsInstagram),
         link: 'https://www.instagram.com/ibnshafee_dev/'
     }
 ] as const;

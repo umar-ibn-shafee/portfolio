@@ -7,6 +7,7 @@ import { FaPaperPlane } from 'react-icons/fa'
 import { motion } from "framer-motion";
 import FlowText from './generic/flow-text'
 import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from 'react-icons/bs'
+import { socials } from '@/lib/data'
 
 export default function Contact() {
 
@@ -68,10 +69,10 @@ export default function Contact() {
           <div className='flex flex-col gap-2 items-start justify-start'>
             <div className='uppercase font-thin text-xs'>Contact details</div>
             <div className='text-left'>
-              <a href='' className='hover:underline underline-offset-4'>
+              <a href='mailto:hello@iamumar.dev' className='hover:underline underline-offset-4'>
                 <FlowText text={'hello@iamumar.dev'} onHover={true} />
               </a>
-              <a href='' className='hover:underline underline-offset-4'>
+              <a href='tel:+91 8008582113' className='hover:underline underline-offset-4'>
                 <FlowText text={'+91 8008582113'} onHover={true} />
               </a>
             </div>
@@ -79,34 +80,15 @@ export default function Contact() {
           <div className='flex flex-col gap-2 items-start justify-start'>
             <div className='uppercase font-thin text-xs'>Socials</div>
             <div className='text-left flex flex-row gap-2'>
-              <a
-                className='hover:underline underline-offset-4'
-                href='https://www.linkedin.com/in/umar-ibn-shafee/'
-                target='_blank'
-              >
-                <BsLinkedin />
-              </a>
-              <a
-                className='hover:underline underline-offset-4'
-                href='https://www.linkedin.com/in/umar-ibn-shafee/'
-                target='_blank'
-              >
-                <BsGithub />
-              </a>
-              <a
-                className='hover:underline underline-offset-4'
-                href='https://www.linkedin.com/in/umar-ibn-shafee/'
-                target='_blank'
-              >
-                <BsTwitter />
-              </a>
-              <a
-                className='hover:underline underline-offset-4'
-                href='https://www.linkedin.com/in/umar-ibn-shafee/'
-                target='_blank'
-              >
-                <BsInstagram />
-              </a>
+              {socials.map(social => (
+                <a
+                  className='hover:underline underline-offset-4'
+                  href={social.link}
+                  target='_blank'
+                >
+                  {social.icon}
+                </a>
+              ))}
             </div>
           </div>
         </div>
