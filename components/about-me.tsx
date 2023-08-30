@@ -71,7 +71,10 @@ export default function AboutMe() {
                             type: 'tween',
                             duration: 0.25
                         }}
-                        className='relative h-88 w-88 bg-black rounded-xl before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:bg-gradient-to-r before:from-[#614cf9] before:to-[#f63b6d] before:blur-[1.5rem]'
+                        className='relative h-88 w-88 bg-black rounded-xl before:absolute before:left-0 
+                        before:top-0 before:-z-10 before:h-full before:w-full before:bg-gradient-to-r 
+                        before:from-[#614cf9] before:to-[#f63b6d] before:blur-[1rem] before:hover:blur-[2rem]
+                        before:transition before:duration-1000 before:hover:duration-200'
                     >
                         <Image
                             src="/DP.png"
