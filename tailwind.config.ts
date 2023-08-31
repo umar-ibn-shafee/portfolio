@@ -17,14 +17,29 @@ const config: Config = {
         sans: ['var(--font-neue-montreal)'],
         mono: ['var(--font-roboto-mono)']
       },
+      flex: {
+        'initial-reverse': '0 1 0%'
+      },
       animation: {
         'blob': 'blob 4s infinite',
         'reverse-blob': 'reverse-blob 4s infinite',
         'corners': 'corners 15s infinite',
         'go-rounds': 'go-rounds 10s infinite',
         'wave': 'wave 15s',
+        'tilt': 'tilt 10s infinite'
       },
       keyframes: {
+        'tilt' : {
+          '0%, 50%, 100%': {
+            transform: 'rotate(0deg)'
+          },
+          '25%': {
+            transform: 'rotate(2deg)'
+          },
+          '75%': {
+            transform: 'rotate(-2deg)'
+          }
+        },
         'wave': {
           '0%': {
             transform: "translate(0px, 0px) scale(1)"

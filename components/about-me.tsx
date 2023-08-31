@@ -64,7 +64,7 @@ export default function AboutMe() {
                     I&apos;ve build well tested, high quality, large-scale web applications in past like PizzaHut,
                     Fabindia, KFC, CatchThatBus, Little Caesar, inseego Connect, Blokbot.
                 </p>
-                <div className='relative flex-initial lg:flex-none'>
+                <div className='relative max-w-[25rem] flex-initial lg:flex-none'>
                     <motion.div
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -72,7 +72,7 @@ export default function AboutMe() {
                             type: 'tween',
                             duration: 0.25
                         }}
-                        className='relative h-88 w-88 bg-black rounded-xl before:absolute before:left-0 
+                        className='relative before:animate-tilt before:absolute before:left-0 
                         before:top-0 before:-z-10 before:h-full before:w-full before:bg-gradient-to-r 
                         before:from-[#614cf9] before:to-[#f63b6d] before:blur-[1rem] before:hover:blur-[2rem]
                         before:transition before:duration-1000 before:hover:duration-200'
@@ -84,7 +84,7 @@ export default function AboutMe() {
                             height={500}
                             quality={95}
                             priority={true}
-                            className='h-90 w-90 rounded-xl object-cover border-[0.35rem] border-black shadow-xl' />
+                            className='h-90 w-90 rounded-xl object-cover border-[1rem] border-black shadow-xl' />
                     </motion.div>
                 </div>
             </div>
