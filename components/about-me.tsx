@@ -8,7 +8,7 @@ import { useSectioninview } from "@/lib/hooks";
 
 export default function AboutMe() {
 
-    const { ref } = useSectioninview('About', 0.75)
+    const { ref } = useSectioninview('About', 0.6)
 
     return (
         <motion.section
