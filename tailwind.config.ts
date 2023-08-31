@@ -23,10 +23,10 @@ const config: Config = {
       animation: {
         'blob': 'blob 4s infinite',
         'reverse-blob': 'reverse-blob 4s infinite',
-        'corners': 'corners 15s infinite',
-        'go-rounds': 'go-rounds 10s infinite',
+        'corners': 'corners 15s linear infinite',
+        'go-rounds': 'go-rounds 15s linear infinite',
         'wave': 'wave 15s',
-        'tilt': 'tilt 10s infinite'
+        'tilt': 'tilt 10s linear infinite'
       },
       keyframes: {
         'tilt' : {
@@ -34,10 +34,10 @@ const config: Config = {
             transform: 'rotate(0deg)'
           },
           '25%': {
-            transform: 'rotate(2deg)'
+            transform: 'rotate(3deg)'
           },
           '75%': {
-            transform: 'rotate(-2deg)'
+            transform: 'rotate(-3deg)'
           }
         },
         'wave': {
