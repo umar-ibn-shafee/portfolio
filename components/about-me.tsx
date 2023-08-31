@@ -13,7 +13,7 @@ export default function AboutMe() {
     return (
         <motion.section
             ref={ref}
-            className='mb-28 w-full leading-8 sm:mb-40 scroll-mt-28 px-12'
+            className='mb-28 w-full leading-8 sm:mb-40 scroll-mt-28 px-4 lg:px-12'
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.275 }}
@@ -48,8 +48,9 @@ export default function AboutMe() {
                 <span className="font-medium">history and philosophy</span>. I&apos;m also
                 learning how to play the guitar.
             </p> */}
-            <div className='flex flex-col-reverse gap-20 text-center lg:text-left lg:flex-row justify-center lg:justify-between items-center'>
-                <p className='mb-3 max-w-[45rem] lg:pr-24'>
+            <div className='flex flex-col-reverse gap-20 justify-center items-center lg:flex-row lg:justify-between 
+            lg:items-center text-center lg:text-left'>
+                <p className='mb-3 lg:pr-24 flex-1'>
                     I am a JavaScript Frontend Developer with 6 years of experience.<br /><br />
                     I&apos;ve experience developing high quality, well tested web applications with TypeScript and
                     all the major frontend frameworks like React, Vue, Angular and server rendered applications with
@@ -63,7 +64,7 @@ export default function AboutMe() {
                     I&apos;ve build well tested, high quality, large-scale web applications in past like PizzaHut,
                     Fabindia, KFC, CatchThatBus, Little Caesar, inseego Connect, Blokbot.
                 </p>
-                <div className='relative h-96 w-96 flex-none'>
+                <div className='relative flex-initial lg:flex-none'>
                     <motion.div
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1 }}
