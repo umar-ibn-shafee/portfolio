@@ -180,11 +180,11 @@ export const socials = [
     {
         name: 'Twitter',
         icon: React.createElement(BsTwitter),
-        link: 'https://twitter.com/IbnShafee'
+        link: 'https://twitter.com/iamumar_dev'
     },
     {
         name: 'Instagram',
         icon: React.createElement(BsInstagram),
-        link: 'https://www.instagram.com/ibnshafee_dev/'
+        link: 'https://www.instagram.com/iamumar.dev'
     }
 ] as const;
