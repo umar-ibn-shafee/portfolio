@@ -74,7 +74,7 @@ export default function Experience() {
                     className='text-sm underline underline-offset-2 cursor-pointer'
                     onClick={handleShowMore(i)}
                   >
-                    {showMore.includes(i) ? 'show less' : 'show more'}
+                    {showMore.includes(i) ? 'show less' : '...show more'}
                   </span>
                 </p>
                 <ul className='flex flex-wrap gap-2 !mt-2 sm:mt-auto'>

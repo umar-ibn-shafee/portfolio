@@ -45,7 +45,7 @@ const neuefontAll = localFont({variable: '--font-neue-montreal', src: [
 
 export const metadata: Metadata = {
   title: 'Mohammed Umar · Full-stack developer',
-  description: 'Umar is a forntend focused Full-stack Engineer with 6 years of experience.',
+  description: 'Mohammed Umar is a forntend focused Full-stack Engineer with 6 years of experience.',
 }
 
 export default function RootLayout({
