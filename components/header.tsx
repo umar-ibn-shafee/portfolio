@@ -42,7 +42,7 @@ export default function Header() {
     }
 
     return (
-        <header className='z-[999] relative'>
+        <header className='z-[99] relative'>
             <div className='sm:hidden flex justify-center'>
                 <nav
                     className={clsx(`fixed top-10 w-[90vw] flex flex-row items-center justify-between font-medium 
