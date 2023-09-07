@@ -128,7 +128,7 @@ export default function Intro() {
                         <BsLinkedin />
                     </a>
 
-                    <a
+                    {/* <a
                         className='bg-white p-4 text-gray-600 hover:text-black flex justify-center items-center 
                     gap-2 rounded-xl outline-none focus:scale-125 hover:scale-125 active:scale-105 transition-all
                     border border-black/10 dark:bg-white/10 dark:text-white/70'
@@ -136,7 +136,7 @@ export default function Intro() {
                         target='_blank'
                     >
                         <BsGithub />
-                    </a>
+                    </a> */}
                 </motion.div>
             </div>
         </section>
