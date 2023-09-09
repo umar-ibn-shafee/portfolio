@@ -10,7 +10,7 @@ export default function Preloader() {
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false)
-        }, 2000);
+        }, 2500);
     }, [])
     const anime = {
         i: {
@@ -20,6 +20,7 @@ export default function Preloader() {
             opacity: 1,
             transition: {
                 delay: delay,
+                duration: 1,
                 ease: easeIn
             }
         }),
@@ -27,6 +28,7 @@ export default function Preloader() {
             opacity: 0,
             transition: {
                 delay: delay,
+                duration: 1,
                 ease: easeOut
             }
         })
@@ -36,10 +38,10 @@ export default function Preloader() {
             {isLoading &&
                 <motion.div
                     className='z-[999] h-[100vh] w-[100vw] fixed top-0 left-0 bg-white dark:bg-black flex items-center 
-                    justify-center'
+                    justify-center cursor-wait text-center'
                     initial={{ opacity: 1 }}
                     animate={{ opacity: 1 }}
-                    exit={{ opacity: 0, transition: { duration: 1, delay: 1 } }}
+                    exit={{ opacity: 0, transition: { duration: 1, delay: 1.85 } }}
                 >
                     <p
                         className='font-bold text-4xl'
@@ -49,7 +51,7 @@ export default function Preloader() {
                             initial='i'
                             animate='a'
                             exit='e'
-                            custom={0.6}
+                            custom={0.5}
                         >
                             Mohammed Umar
                         </motion.span>
@@ -59,7 +61,7 @@ export default function Preloader() {
                             initial='i'
                             animate='a'
                             exit='e'
-                            custom={0.8}
+                            custom={1}
                         >
                             {' '}Portfolio
                         </motion.span>
